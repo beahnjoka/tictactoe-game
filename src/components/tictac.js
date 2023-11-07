@@ -91,14 +91,15 @@ const won = (winner) =>{
   }
 }
 
-const reset = () =>{
+const reset = () => {
   setLock(false);
-  data =["","","","","","","","",""];
-  titleRef.current.innerHTML= 'Tic Tac Toe Game in<span>React</span>';
-  box_array.map((e)=>{
-    e.current.innerHTML ="";
-  })
-
+  data = ["", "", "", "", "", "", "", "", ""];
+  titleRef.current.innerHTML = 'Tic Tac Toe Game in<span>React</span>';
+  box_array.forEach((ref) => {
+    if (ref && ref.current) {
+      ref.current.innerHTML = "";
+    }
+  });
 }
 
   return (
