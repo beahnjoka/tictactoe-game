@@ -83,18 +83,18 @@ const won = (winner) =>{
   setLock(true);
   if(winner==="x")
   {
-    titleRef.current.innerHTML = `congratulations: <img src =${cross_icon}`
+    titleRef.current.innerHTML = `congratulations you won`
   }
   else
   {
-    titleRef.current.innerHTML = `congratulations: <img src =${cirlce_icon}`
+    titleRef.current.innerHTML = `congratulation you won`
   }
 }
 
 const reset = () =>{
   setLock(false);
   data =["","","","","","","","",""];
-  titleRef.current.innerHTML= 'Tic Tac Toe Game in <span>React</span>';
+  titleRef.current.innerHTML= 'Tic Tac Toe Game in<span>React</span>';
   box_array.map((e)=>{
     e.current.innerHTML ="";
   })
